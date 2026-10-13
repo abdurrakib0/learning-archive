@@ -1,0 +1,430 @@
+/*
+Template Name: Moby Landing page
+Author: AHTheme
+Author URI: https://themeforest.net/user/ah-theme
+Version: 1.1
+*/
+/*
+TABLE OF CONTENTS:
+
+1.RESET CSS
+2.GENERAL CLASSES and Id
+  2.1 - main_header // start header
+	2.2 - top_section // hero section
+	2.3 - features // features section
+	2.4 - video // video section
+	2.5 - description_section // description section
+	2.6 - screenshot_section // screen shots section
+	2.7 - clients_section // clients section
+	2.8 - team_section // team section
+	2.9 - pricing_section // pricing tablets section
+	2.10 - faq_section // FAQ section
+	2.11 - blogs_section // blogs section
+	2.12 - contact_section // contact us section
+	2.13 - subscribe_section // subscribe section
+	2.14 - footer_sec // footer
+
+3. General COLOR CLASSES
+	3.1- background colors
+		3.1.1- bg_grad  // background Gradient light purple
+		3.1.2- bg_light_blue // background Gradient light blue
+		3.1.3- bg_orange // background Gradient orange
+		3.1.4- bg_purple // background Gradient purple
+		3.1.5- bg_purple_opacity // background Gradient purple with opacity
+		3.1.6- bg_lightblue_opacity // background Gradient light blue with opacity
+		3.1.7- bg_grad_opacity // background Gradient light purple with opacity
+  3.2- text color
+		3.2.1- col_orange // orange text
+		3.2.2- col_lightpurple // light purple text
+		3.2.3- col_purple // purple text
+		3.2.4- col_light_blue // light blue text
+		3.2.5- col_light_green // light green text
+		3.2.6- col_lightpurple // light purple text
+*/
+
+/* ====== fonts =========== */
+
+@font-face {
+	font-family: 'Conv_Quicksand-Bold';
+	src: url('../fonts/font/Quicksand-Bold.eot');
+	src: local('☺'), url('../fonts/font/Quicksand-Bold.woff') format('woff'), url('../fonts/font/Quicksand-Bold.ttf') format('truetype'), url('../fonts/font/Quicksand-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Quicksand-Medium';
+	src: url('../fonts/font/Quicksand-Medium.eot');
+	src: local('☺'), url('../fonts/font/Quicksand-Medium.woff') format('woff'), url('../fonts/font/Quicksand-Medium.ttf') format('truetype'), url('../fonts/font/Quicksand-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Quicksand-Regular';
+	src: url('../fonts/font/Quicksand-Regular.eot');
+	src: local('☺'), url('../fonts/font/Quicksand-Regular.woff') format('woff'), url('../fonts/font/Quicksand-Regular.ttf') format('truetype'), url('../fonts/font/Quicksand-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* ====== Color Palette =========== */
+
+
+$purpcol:#cd9ffa;// purple color
+$light-purple-col:#7a60ff;//blue color
+$dark_blue:#08a7dd;// light blue
+$light_blue:#00d7dd;// light green
+$orange:#fd5656;// orange color
+$light_orange:#fc8b56;// light orange color
+$dark_purple:#742f70;// dark purple color
+$light_purple:#c94b4b;// light purple color
+$tc: #333;  //text color
+$bc: #fff;  //basic color
+$facebook: #3b5998;
+$twitter: #55acee;
+$instagram: #e1306c;
+$googleplus: #dc4e41;
+$youtube: #cd201f;
+$linkedin: #0077b5;
+$behance: #1769ff;
+$pintrest: #bd081c;
+
+/* ====== fonts =========== */
+
+$font-family-regular: 'Conv_Quicksand-Regular';
+$font-family-medium: 'Conv_Quicksand-Medium';
+$font-family-bold: 'Conv_Quicksand-Bold';
+
+
+/* ====== Font Sizes =========== */
+$font-extra-small: 14px;
+$base-font-size: 15px;
+$font-small: 1.4rem;
+$font-big: 2rem;
+$font-extra-big: 2.5rem;
+
+/* ====== Text =========== */
+
+$base-line-height: 24px;
+$letter-space: 1px;
+
+/* ====== padding =========== */
+
+$padding-one: 3rem;
+$padding-two: 2rem;
+$padding-three: 1rem;
+
+/* ====== margin =========== */
+
+$margin-one: 3rem;
+$margin-two: 2rem;
+$margin-three: 1rem;
+
+/* ====== border radius =========== */
+
+$br: 8px;
+
+
+/* ====== box shadow =========== */
+
+$box-shadow : 0 0 25px #d0d0d0;
+
+
+ /*----------- functions -----------*/
+
+ @mixin scale($a,$b) { // scale animation
+   -webkit-transform: scale($a,$b);
+   -moz-transform: scale($a,$b);
+   -o-transform: scale($a,$b);
+      transform: scale($a,$b);
+ }
+ @mixin tform($a,$b) { // translate animation
+   -webkit-transform: translate($a,$b);
+   -moz-transform: translate($a,$b);
+   -o-transform: translate($a,$b);
+      transform: translate($a,$b);
+ }
+ @mixin rotate($a) { // rotatex animation
+	 -webkit-transform: rotate($a);
+	 -moz-transform: rotate($a);
+	 -o-transform: rotate($a);
+			transform: rotate($a);
+ }
+ @mixin rotatex($a) { // rotatex animation
+   -webkit-transform: rotateX($a);
+   -moz-transform: rotateX($a);
+   -o-transform: rotateX($a);
+      transform: rotateX($a);
+ }
+ @mixin rotatey($a) { // rotatey animation
+   -webkit-transform: rotateY($a);
+   -moz-transform: rotateY($a);
+   -o-transform: rotateY($a);
+      transform: rotateY($a);
+ }
+ @mixin trans($a) { // transition
+   -webkit-transition: all $a ease-in-out;
+   -moz-transition: all $a ease-in-out;
+   -o-transition: all $a ease-in-out;
+      transition: all $a ease-in-out;
+ }
+ @mixin skew($a,$b) { // skew animate
+   -webkit-transform: skew($a,$b);
+   -moz-transform: skew($a,$b);
+   -o-transform: skew($a,$b);
+      transform: skew($a,$b);
+ }
+ @mixin manimate($a,$b,$c,$d,$e,$f,$g) {
+   -webkit-transform: rotate($a) translate($b,$c)  scale($d,$e) skew($f,$g);
+   -moz-transform:rotate($a) translate($b,$c)  scale($d,$e) skew($f,$g);
+   -o-transform: rotate($a) translate($b,$c)  scale($d,$e) skew($f,$g);
+      transform: rotate($a) translate($b,$c)  scale($d,$e) skew($f,$g);
+ }
+ /*---------- animation ----------*/
+ @keyframes lds-double-ring {
+ 0% {
+	 -webkit-transform: rotate(0);
+	 transform: rotate(0);
+ }
+ 100% {
+	 -webkit-transform: rotate(360deg);
+	 transform: rotate(360deg);
+ }
+}
+@-webkit-keyframes lds-double-ring {
+ 0% {
+	 -webkit-transform: rotate(0);
+	 transform: rotate(0);
+ }
+ 100% {
+	 -webkit-transform: rotate(360deg);
+	 transform: rotate(360deg);
+ }
+}
+@keyframes lds-double-ring_reverse {
+ 0% {
+	 -webkit-transform: rotate(0);
+	 transform: rotate(0);
+ }
+ 100% {
+	 -webkit-transform: rotate(-360deg);
+	 transform: rotate(-360deg);
+ }
+}
+@-webkit-keyframes lds-double-ring_reverse {
+ 0% {
+	 -webkit-transform: rotate(0);
+	 transform: rotate(0);
+ }
+ 100% {
+	 -webkit-transform: rotate(-360deg);
+	 transform: rotate(-360deg);
+ }
+}
+@keyframes screen1_animate {
+	0%{
+		@include tform(65px,50px);
+	}
+	100%{
+		@include tform(0,0);
+	}
+}
+@keyframes screen2_animate {
+	0%{
+		@include tform(140px,55px);
+	}
+	100%{
+		@include tform(0,0);
+	}
+}
+/* --------------------------------
+RESET CSS
+-------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+ul,
+li {
+  list-style: none;
+}
+select { width: 100%; }
+input:focus,button:focus,textarea:focus { outline: 0; }
+a{
+	color: $tc;
+  &:hover{
+    color: $tc;
+    text-decoration: none;
+  }
+}
+button{
+  padding: .5rem 2rem;
+  cursor: pointer;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 15px;
+  font-size: $base-font-size;
+}
+body {
+  line-height: ($base-line-height/$base-font-size);
+  font-family: $font-family-medium;
+  overflow-x: hidden;
+	background: #f5f5f5;
+	color: $tc;
+}
+input{
+  height: 42px;
+	padding: 0 $padding-three;
+	background: $bc;
+	border: 0;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	@include trans(.3s);
+	&::placeholder{
+		color: #929292;
+	}
+	&:focus{
+		@include tform(0,-.5rem);
+	}
+}
+textarea{
+  resize: none;
+  padding: $padding-three;
+  height: 150px;
+	background: $bc;
+	border: 0;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	@include trans(.3s);
+	&::placeholder{
+		color: #929292;
+	}
+	&:focus{
+		@include tform(0,-.5rem);
+	}
+}
+p,h1,h2,h3,form{
+  margin:0 0 $margin-three 0px;
+}
+h1{
+  font-size: 40px;
+  font-size: $font_extra_big;
+  font-family: $font-family-bold;
+}
+h2{
+  font-size: 30px;
+  font-size: $font_big;
+  font-family: $font-family-bold;
+}
+h3{
+  font-size: 21px;
+  font-size: $font_small;
+  font-family: $font-family-medium;
+}
+section{
+	padding: 5rem 0 ;
+}

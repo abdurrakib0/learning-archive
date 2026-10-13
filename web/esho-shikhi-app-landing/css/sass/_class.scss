@@ -1,0 +1,309 @@
+/*------- text color ---------*/
+.col_orange{
+  color: $orange;
+}
+.col_lightpurple{
+  color: $light-purple-col;
+}
+.col_purple{
+  color: $purpcol;
+}
+.col_light_blue{
+  color: $dark_blue;
+}
+.col_light_green{
+  color: $light_blue;
+}
+.col_lightpurple{
+  color: $light_purple;
+}
+/*----- background Gradient -----*/
+.bg_grad{
+  background: $light-purple-col;
+  background: linear-gradient(to left,$light-purple-col,$purpcol);
+}
+.bg_grad_opacity{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(122, 96, 255, .75);
+  background: linear-gradient(to left, rgba(122, 96, 255, .75), rgba(205, 159, 250, .75));
+  z-index: 0;
+}
+.bg_lightblue_opacity{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(8, 167, 221, 0.75);
+  background: linear-gradient(to left, rgba(8, 167, 221, 0.75),rgba(0, 215, 221, 0.75));
+  z-index: 0;
+}
+.bg_purple_opacity{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(116, 47, 112, 0.75);
+  background: linear-gradient(to left, rgba(116, 47, 112, 0.75), rgba(201, 75, 75, .75));
+  z-index: 0;
+}
+.bg_light_blue{
+  background: $dark_blue;
+  background: linear-gradient(to left,$dark_blue,$light_blue);
+}
+.bg_orange{
+  background: $orange;
+  background: linear-gradient(to left,$orange,$light_orange);
+}
+.bg_purple{
+  background: $dark_purple;
+  background: linear-gradient(to left,$dark_purple,$light_purple);
+}
+.bg_image{
+  background: url(http://via.placeholder.com/1920x1000);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*----- background style -----*/
+.bg_rounded_left{
+  position: relative;
+  overflow: hidden;
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    padding-top: 95%;
+    height: 0%;
+    right: 0;
+    top: 5%;
+    z-index: 0;
+    -webkit-border-radius: 50% 100% 100% 50% / 69% 75% 75% 69%;
+    border-radius: 50% 100% 100% 50% / 69% 75% 75% 69%;
+  }
+  img{
+    position: relative;
+    z-index: 0;
+  }
+  &.purple{
+    &:before{
+      background: $purpcol;
+      background: linear-gradient(to right, $light-purple-col, $purpcol);
+    }
+  }
+  &.lightblue{
+    &:before{
+      background: $dark_blue;
+      background: linear-gradient(to right, $dark_blue, $light_blue);
+    }
+  }
+  &.darkpurple{
+    &:before{
+      background: $dark_purple;
+      background: linear-gradient(to right, $dark_purple, $light_purple);
+    }
+  }
+}
+.bg_rounded_right{
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 0 auto;
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    padding-top: 95%;
+    height: 0%;
+    right: 0;
+    top: 5%;
+    z-index: 0;
+    -webkit-border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
+    border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
+  }
+  img{
+    position: relative;
+    z-index: 0;
+  }
+  &.purple{
+    &:before{
+      background: $purpcol;
+      background: linear-gradient(to left, $light-purple-col, $purpcol);
+    }
+  }
+  &.lightblue{
+    &:before{
+      background: $dark_blue;
+      background: linear-gradient(to left, $dark_blue, $light_blue);
+    }
+  }
+  &.darkpurple{
+    &:before{
+      background: $dark_purple;
+      background: linear-gradient(to right, $light_purple, $dark_purple);
+    }
+  }
+}
+.bg_white{
+  background: $bc;
+}
+/*------ button style -------*/
+.btn_grad{
+  padding: .7rem 2rem;
+  display: inline-block;
+  color: $bc;
+  border-radius: 2rem;
+  border: 0;
+  background: $light-purple-col;
+  background: linear-gradient(to left,$light-purple-col,$purpcol);
+  &:hover{
+    color: $bc;
+  }
+}
+.btn_white{
+  padding: .7rem 2rem;
+  display: inline-block;
+  border-radius: 2rem;
+  border: 0;
+  background: $bc;
+}
+.btn_lightblue{
+  padding: .7rem 2rem;
+  display: inline-block;
+  border-radius: 2rem;
+  border: 0px;
+  color: $bc;
+  background: $dark_blue;
+  background: linear-gradient(to left,$dark_blue,$light_blue);
+  &:hover{
+    color: $bc;
+  }
+}
+.btn_orange{
+  padding: .7rem 2rem;
+  display: inline-block;
+  border-radius: 2rem;
+  border: 0px;
+  color: $bc;
+  background: $orange;
+  background: linear-gradient(to left,$orange,$light_orange);
+  &:hover{
+    color: $bc;
+  }
+}
+.btn_darkpurple{
+  padding: .7rem 2rem;
+  display: inline-block;
+  border-radius: 2rem;
+  border: 0px;
+  color: $bc;
+  background: $dark_purple;
+  background: linear-gradient(to left,$dark_purple,$light_purple);
+  &:hover{
+    color: $bc;
+  }
+}
+/*-------- section title ---------*/
+.section_tit{
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 1rem;
+  display: inline-block;
+  &:before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    left: calc(50% - 10px);
+    border-radius: 50%;
+  }
+  &.purple{
+    &:before{
+      background: $light-purple-col;
+      background: linear-gradient(to left,$light-purple-col,$purpcol);
+    }
+  }
+  &.lightblue{
+    &:before{
+      background: $dark_blue;
+      background: linear-gradient(to left,$dark_blue,$light_blue);
+    }
+  }
+  &.darkpurple{
+    &:before{
+      background: $dark_purple;
+      background: linear-gradient(to right, $dark_purple, $light_purple);
+    }
+  }
+}
+.sec_desc{
+  font-size: 17px;
+}
+/*-------- Geniral Classes ---------*/
+.owl-carousel{
+  .owl-dots{
+    display: flex;
+    justify-content: center;
+    .owl-dot{
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      opacity: .3;
+      margin: 0 .3rem;
+      &.active{
+        opacity: 1;
+      }
+    }
+  }
+  &.purple{
+    .owl-dot{
+      background: $light-purple-col;
+      background: linear-gradient(to left,$light-purple-col,$purpcol);
+    }
+  }
+  &.lightblue{
+    .owl-dot{
+      background: $dark_blue;
+      background: linear-gradient(to left,$dark_blue,$light_blue);
+    }
+  }
+  &.darkpurple{
+    .owl-dot{
+      background: $dark_purple;
+      background: linear-gradient(to right, $dark_purple, $light_purple);
+    }
+  }
+}
+.text_bold{
+  font-family: $font-family-bold;
+}
+.box_shadow{
+  box-shadow: $box-shadow;
+}
+.box_shadow_purple{
+  box-shadow: 0 0 0 10px rgba(122, 96, 255, .3);
+}
+.box_shadow_blue{
+  box-shadow: 0 0 0 10px rgba(8, 167, 221, 0.3);
+}
+.box_shadow_darkpurple{
+  box-shadow: 0 0 0 10px  rgba(116, 47, 112, 0.3);
+}
+.font-small{
+  font-size: $font-extra-small;
+}
+.padding_top{
+  padding-top: 5rem;
+}
+.margin_top{
+  margin-top: 5rem;
+}
+.hidden{
+  display: none;
+}

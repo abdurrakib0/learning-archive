@@ -1,0 +1,311 @@
+// Large devices (desktops, less than 1600px)
+@media (max-width: 1600px) {
+}
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+ }
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+  /* --- header responsive less than 992px ---*/
+  .main_header{
+    .navbar-collapse{
+      position: fixed;
+      top: -150%;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      background: #f5f5f5;
+      font-size: 1.2rem;
+      @include trans(.3s);
+      padding-top: 7rem;
+      .navbar-nav{
+        margin: 0 auto;
+      }
+      .nav-item {
+        .nav-link{
+          padding: 1rem 1rem;
+          font-size: $font-small;
+          color: $tc;
+          &:before{
+            left: 49.5%;
+            background: $tc;
+            background: linear-gradient(to left, $tc, #b5b5b5);
+          }
+        }
+      }
+      &.show{
+        top: 0%;
+      }
+    }
+  }
+  /* --- top section responsive less than 992px ---*/
+  #top_section{
+    padding-top: 6rem;
+    .top_mob {
+      display: none;
+    }
+    &.style_2{
+      &:before {
+        border-radius: 0 0 70% 40%/0 0 95% 38%;
+      }
+    }
+    &.style_3:before {
+      border-width: 5rem 100vw 0 0;
+    }
+    .top_content {
+      margin: 3rem 0 0;
+      text-align: center;
+      .padding_top{
+        padding-top: 0;
+      }
+    }
+  }
+  /* --- article responsive less than 992px ---*/
+  .articles , .articles_section{
+    .left-side {
+      margin: 2rem 0 3rem;
+    }
+  }
+  /* --- blog responsive less than 992px ---*/
+  .blog_img {
+    line-height: 0;
+    height: 140px;
+  }
+  /* --- FAQ responsive less than 992px ---*/
+  #faq_section{
+    .faq_mob{
+      img {
+        max-height: 300px;
+      }
+    }
+  }
+ }
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+  /* --- hero section responsive less than 767px ---*/
+  #top_section{
+    &.style_2{
+      &:before {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 98% 70%/0 0 95% 0%;
+      }
+    }
+  }
+  /* --- description section responsive less than 767px ---*/
+  #description_section{
+    .desc_row:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+    .desc_row{
+      .desc_mob{
+        margin: 1rem auto 0;
+        img{
+          max-height: 280px;
+        }
+      }
+      .bg_rounded_right{
+        &:before {
+          width: 80%;
+          padding-top: 72%;
+          right: 10%;
+        }
+      }
+      .bg_rounded_left{
+        &:before {
+          width: 80%;
+          padding-top: 72%;
+          left: 10%;
+        }
+      }
+    }
+    .description_timeline{
+      text-align: center;
+      &:before{
+        display: none;
+      }
+      .first_point{
+        display: none;
+      }
+      .description_left , .description_right{
+        padding: 0;
+      }
+      .description_right{
+        margin-top: 1rem;
+      }
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+      &.padding_top{
+        padding-top: 2rem;
+      }
+    }
+  }
+  /* --- screenshots section responsive less than 767px ---*/
+  #screenshot_section{
+    .screenshots{
+      padding: 3rem 0 0;
+      .owl-carousel {
+        padding-bottom: 5rem;
+      }
+    }
+  }
+  /* --- FAQ section responsive less than 767px ---*/
+  #faq_section{
+    .faq_mob {
+      max-width: 280px;
+      margin: 2rem auto 0;
+    }
+    #accordion {
+      margin-top: 2rem;
+    }
+  }
+  .blog_img {
+    height: 200px;
+  }
+ }
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  /* --- basic style responsive less than 575px ---*/
+  html{
+    font-size: 12px;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: 1.2;
+  }
+  .section_tit{
+    &:before {
+      left: 48%;
+    }
+  }
+  .blog_img {
+    line-height: 0;
+    height: 140px;
+  }
+  /* --- hero section responsive less than 575px ---*/
+  #top_section{
+    .top_content{
+      .d-flex{
+        justify-content: center;
+        align-items: center;
+        .app-btn{
+          margin: .5rem 0 0;
+          flex-basis: 50.5%;
+        }
+        .app-btn:first-child{
+          margin: 1.5rem 0 .5rem;
+        }
+      }
+    }
+  }
+    /* --- contact form responsive less than 575px ---*/
+  #contact_form{
+    .row{
+      .col{
+        width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  /* --- screenshots section responsive less than 575px ---*/
+  #screenshot_section{
+    .screenshots{
+      padding: 3rem 0 0;
+      .mob_mocup {
+        width: 52%;
+        left: 25%;
+      }
+      .owl-item img {
+        width: 47% !important;
+      }
+      .owl-carousel{
+        padding-bottom: 8rem;
+        .owl-nav{
+          width: 50%;
+          left: 25%;
+        }
+      }
+    }
+  }
+  /* --- Team section responsive less than 575px ---*/
+  #team_section{
+    #team_slider{
+      margin-top: 2rem;
+      .team_item{
+        .team_img_right,.team_img_left{
+          width: 60%;
+          padding-top: 57%;
+        }
+      }
+    }
+  }
+  /* --- Video section responsive less than 575px ---*/
+  #video_section{
+    &:after{
+      padding-top: 3rem;
+    }
+    &:before{
+      padding-top: 3rem;
+      top: 0rem;
+    }
+  }
+  /* --- subscribe form responsive less than 575px ---*/
+  #subscribe_section{
+    &:after{
+      padding-top: 3rem;
+    }
+    &:before{
+      padding-top: 3rem;
+      top: 0rem;
+    }
+    #subscribe_form {
+      .btn_grad {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+  // Extra small devices (portrait phones, less than 575px)
+  .articles{
+    padding: 2rem 0 1rem;
+    #comment_form{
+      .col{
+        flex-basis: 100%;
+      }
+    }
+  }
+  .articles_section{
+    padding: 3rem 0 2rem;
+  }
+  .error_section {
+    .error_image{
+      margin-bottom: 6rem;
+    }
+  }
+}
+// Extra small devices (portrait phones, less than 474px)
+@media (max-width: 474px) {
+  #top_section{
+    .app-btn{
+      margin-bottom: 1rem;
+    }
+  }
+  // Extra small devices (portrait phones, less than 474px)
+  .articles{
+    .comments{
+      .comment{
+        .comment_img {
+          width: 90px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
